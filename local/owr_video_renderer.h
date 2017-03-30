@@ -65,6 +65,7 @@ OwrVideoRenderer *owr_video_renderer_new(const gchar *tag);
 typedef struct _GstContext OwrGstContext;
 typedef OwrGstContext * (* OwrVideoRendererRequestContextCallback) (const gchar *context_type, gpointer user_data);
 void owr_video_renderer_set_request_context_callback(OwrVideoRenderer *renderer, OwrVideoRendererRequestContextCallback callback, gpointer user_data, GDestroyNotify destroy_data);
+static void owr_video_renderer_finalize(GObject *object);
 
 G_END_DECLS
 
